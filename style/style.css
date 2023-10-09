@@ -55,9 +55,9 @@ header nav ul {
 header nav ul li a {
     text-decoration: none;
     font-family: var(--font-title);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    padding: 8px 30px;
+    padding: 8px 20px;
     color: #444;
 }
 
@@ -92,7 +92,7 @@ header nav ul li a:hover {
 }
 
 #home-area div .title {
-    font-size: 4.2rem;
+    font-size: 4rem;
     font-weight: 500;
     font-family: var(--font-title);
     line-height: 65px;
@@ -149,7 +149,7 @@ header nav ul li a:hover {
 
 /* section feature */
 
-section.feature{
+section#feature{
     position: relative;
 }
 
@@ -207,11 +207,11 @@ article.about-colum div .block ion-icon {
 }
 article.about-colum div .block {
     margin: 20px;
-    height: 350px;
-    width: 250px;
+    height: 360px;
+    width: 300px;
     border: 2px solid #5789ff;
     border-radius: 10px;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -221,18 +221,18 @@ article.about-colum div .block:hover {
     transition: all 0.5s ease-in-out;
 }
 
-
-
 article .block h4 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 30px;
     text-align: center;
     font-family: var(--font-text);
 }
 
 article .block p {
-    font-size: 1rem;
-    margin-top: 20px;
+    font-size: 1.1rem;
+    margin-top: 15px;
     font-family: var(--font-text);
+    font-weight: bold;
 }
 
 article .container-box .box-position {
@@ -244,7 +244,7 @@ article .container-box .box-position {
 
 /* section about product */
 
-section.about-product {
+section#about-product {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -278,7 +278,7 @@ section .container-product-title p {
     font-family: var(--font-text);
     text-align: center;
     margin: 10px 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 
@@ -317,14 +317,14 @@ section div .container-product-banner {
 
 .container-product-banner div li .content h4 {
     font-size: 1.8rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-text);
     color: #fff;
     margin-bottom: 5px;
 }
 
 .container-product-banner div li .content p {
     font-size: 1.5rem;
-    font-family: 'Poppins' sans-serif;
+    font-family: var(--font-text);
     color: #fff;
 }
 
@@ -339,7 +339,8 @@ section .container-product div img {
 
 /* Section resource-product */
 
-section.resource-product {
+section#resource-product {
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -367,7 +368,8 @@ section .resource-tittle h2 {
 section .resource-tittle p {
     font-size: 1.2rem;
     font-family: var(--font-text);
-    width: 600px;
+    font-weight: bold;
+    max-width: 700px;
     margin-top: 20px;
 }
 
@@ -403,12 +405,14 @@ section div .resource-content ul li {
 
 section div .resource-content ul li h4 {
     font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-text);
+    font-weight: bold;
 }
 
 section div .resource-content ul li p {
     font-size: 1.2rem;
-    font-family: 'Poppins' sans-serif;
+    font-family: var(--font-text);
+    font-weight: bold;
 }
 
 section div .resource-content ul li ion-icon {
@@ -444,8 +448,8 @@ div.slide:hover p, div.slide:hover .button {
 
 /* section contact */
 
-section.contact {
-    height: 80vh;
+section#contact {
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -584,13 +588,18 @@ footer .footer-links ul li a {
 
 @media (max-width: 1024px) {
 
-    #home-area .title {
-        max-width: 500px;
-        font-size: 3rem;
-        line-height: 75px;
+
+    header nav ul li a {
+        font-size: 1rem;
     }
-    #home-area p {
-        max-width: 500px;
+    #home-area div .title {
+        max-width: 450px;
+        font-size: 3rem;
+        line-height: 45px;
+    }
+    #home-area div .subtitle {
+        max-width: 400px;
+        font-size: 1.5rem;
     }
     #home-area .banner img {
         max-width: 350px;
@@ -620,14 +629,24 @@ footer .footer-links ul li a {
         width: 100%;
         justify-content: space-around;
     }
-    .container-product-banner ul {
-        max-width: 300px;
+    .product-banner-desc {
+       width: 550px;
     } 
-    .container-product-banner ul li p {
-        max-width: 350px;
+    .container-product-banner div li .icon {
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
     }
+    .container-product-banner div li {
+        margin-bottom: 25px;
+    }
+    .container-product-banner div li .content h4,
+    .container-product-banner div li .content p {
+        font-size: 1.3rem;
+    }
+    
     .container-product .about-banner img {
-        height: 400px;
+        width: 300px;
         padding: 0;
     }
 
@@ -648,24 +667,7 @@ footer .footer-links ul li a {
     }
 
 
-    .container-products .products-description h1 {
-        margin-top: 50px;
-    }
-    .products-available .container-products .cards {
-        max-width: 900px;
-        margin: auto;
-        height: 100vh;
-        overflow-y: hidden;
-        overflow-x: hidden;
-    }
-    .container-products .cards .slide {
-        min-width: 350px;
-        margin: 0 40px;
-    }
-    .cards .slide img {
-        max-width: 200px;
-    }
-   
+    
 
     .contact {
         flex-direction: column;
